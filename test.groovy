@@ -8,7 +8,12 @@ job('ci-1') {
         }
     }
     scm {
-        github 'sheehan/job-dsl-playground'
+        git {
+            remote {
+                github('account/repo', 'https')
+                credentials('github-ci-key')
+            }
+        }
     }
     steps {
         gradle 'test'
