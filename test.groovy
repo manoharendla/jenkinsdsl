@@ -17,7 +17,7 @@ job('mano-1') {
         }
     }
     steps {
-        sh '''
+        shell '''
         echo "hello"
         python --version
         pip install -r requirements.txt
