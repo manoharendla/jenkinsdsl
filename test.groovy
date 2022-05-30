@@ -1,4 +1,4 @@
-job('ci-1') {
+job('mano-1') {
     description 'Build and test the app.'
     configure { project -> 
        project / 'buildWrappers' / 'EnvInjectPasswordWrapper' {
