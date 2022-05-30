@@ -17,9 +17,11 @@ job('ci-1') {
         }
     }
     steps {
-        gradle 'test'
+        sh '''
+        echo "hello"
+        python --version
+        pip install -r requirements.txt
+        '''
     }
-    publishers {
-        archiveJunit 'build/test-results/**/*.xml'
-    }
+    
 }
