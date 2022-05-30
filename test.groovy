@@ -11,7 +11,8 @@ job('ci-1') {
         git {
             remote {
                 github('account/repo', 'https')
-                credentials('mano-github')
+                credentials('github-ci-key')
+                branch('*/main')
             }
         }
     }
